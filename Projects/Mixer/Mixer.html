@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>                              <!--This is where to put things the computer sees-->
+        <title>Hanna Mitamura</title> <!--White text is internet tab label-->
+        <meta charset="utf-8">          <!-- UTF-8 instead of ASCII for internaitonal use-->
+        <link rel="stylesheet" href="../../HannaSiteStyle.css">
+        <meta name="title" content="Hanna Mitamura MechE">
+        <meta name="description" content="Hanna Mitamura, Mechanical Engineer">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <div>
+            <header><h1><a href="https://www.linkedin.com/in/hanna-mitamura-581784113" target="_blank">Hanna Mitamura</a></h1></header>
+             <nav>
+                 <table>
+                     <tr>
+                         <td>
+                         <div class="drop">
+                         <a href="../../index.html">Portfolio</a>
+                             <div class="dropOptions">
+                             <ul>
+                             <li><a href="../../index.html#Projects">Projects</a></li>
+                             <li><a href="../../index.html#CAD">CAD Designs</a></li>
+                             <li><a href="../../index.html#Reverse">Reverse Engineering</a></li>
+
+                             </ul>
+                              </div>
+                         </div>
+                         </td>
+                         <td><a href="../../Resume/HannaResume.html">Resume</a></td>
+                         <td>
+                             <div class="drop">
+                                 <a href="../../Coursework/coursework.html">Coursework</a>
+                                     <div class="dropOptions">
+                                     <ul>
+                                     <li><a href="../../Coursework/coursework.html#BU">Boston University</a></li>
+                                     <li><a href="../../Coursework/coursework.html#Vassar">Vassar College</a></li>
+                                     <li><a href="../../Coursework/coursework.html#Additional">Additional Coursework</a></li>
+                                     </ul>
+                                      </div>
+                                 </div>
+                         </td>
+                         <td>
+                             <div class="drop">
+                                 <a href="../../Reports.html">Reports</a>
+                                     <div class="dropOptions">
+                                     <ul>
+                                     <li><a href="../../Reports.html#Eng">Mechanical Engineering</a></li>
+                                     <li><a href="../../Reports.html#Chem">Chemistry</a></li>
+                                     <li><a href="../../Reports.html#Biochem">Biochemistry</a></li>
+                                     <li><a href="../../Reports.html#Anth">Anthropology</a></li>
+                                     </ul>
+                                      </div>
+                                 </div>
+                         </td>
+                         <td><a href="../../About/About.html">About</a></td>
+                     </tr>
+                     <tr>
+                         Coded by me in HTML/CSS. Click my name to be redirected to my Linkedin!
+                     </tr>
+                 </table>
+             </nav>
+            </div>
+        <br>
+        <div>
+        <fieldset>
+            <legend><h2>Microfluidic Mixer</h2></legend>
+            
+            <aside>
+                <img src="MixerCOMSOL.png">
+                <figcaption>COMSOL Velocity Profile</figcaption>
+            </aside>
+
+            <article>
+            <section>
+            GOAL
+            <br>
+            The goal of this project was to become familiar with existing research related to microfluidic mixing, and 
+            to design and simulate a novel microfluidic mixer design based on those findings.
+            </section>
+            <section>
+            BACKGROUND
+            <br>
+            Microfluidic mixing is, by definition, mixing of two or more fluids at microscale. Such ‘miniaturization’ of fluid mixing components
+            implies decreased sample size requirements, increased speed of sample processing, and reduced manufacturing cost,
+            all of which are desirable in conducting chemical, biological and biomedical research.          
+            <br>
+            <br>
+            </section>
+            <section>
+            DESIGN
+            <br>
+            A T-shaped passive microfluidic mixer design was selected due to the shape’s relative simplicity. To
+            establish a control model for this project, a straight-channeled microchannel was designed following the
+            geometric proportions found in previous literature, and scaled to fit the project parameters, listed in the table below.
+            <br>
+            <table>
+                <tr class="BOM">
+                    <th>Parameter</th>
+                    <th>Value</th>
+                </tr>
+                <tr class="BOM">
+                    <td>Microchannel width (&micro;m)</td>
+                    <td>40</td>
+                </tr>
+                <tr class="BOM">
+                    <td>Inlet width (&micro;m)</td>
+                    <td>20</td>
+                </tr>
+                <tr class="BOM">
+                    <td>Microchannel depth (&micro;m)</td>
+                    <td>30</td>
+                </tr>
+                <tr class="BOM">
+                    <td>Feature min. size (&micro;m)</td>
+                    <td>5</td>
+                </tr>
+                <tr class="BOM">
+                    <td>Overall max. chip size (mm)</td>
+                    <td>20 x 20</td>
+                </tr>
+            </table>
+            <br>
+            To maintain similarity to the control design, as well as to significantly reduce the final length of the microchannel, meander
+            designs were avoided. Baffles were selected over the use of free-standing packing (which causes stream splitting).
+           <br>
+           <br>
+           <table>
+               <tr class="BOM">
+                   <td><img src="MixerStraight.png" width="450px"></td>
+                   <td>Straight-channeled Control <br>(Dimensions given in &micro;m)</td>
+               </tr>
+               <tr class="BOM">
+                   <td><img src="Mixer.png" width="450px"></td>
+                   <td>Channel with Mixing Chambers set at Angle A <br>(Dimensions given in &micro;m)</td>
+               </tr>
+           </table>
+           <br>
+           <br>
+           Formation of distinct ‘mixing chambers’ by symmetrically placed baffles has been shown to improve mixing
+            efficiency. This design combines more typical rectangular chambers and “fish-shaped”
+            pocket chambers proposed in earlier publications with the aim of both improving mixing efficiency (as measured by
+            mixing index, MI=1-sigma) and reducing manufacturing costs associated with more complex channel geometry. 
+           <br>
+            Note:
+            <br>
+            <img src="MixerEqn.png">
+            <br>
+            <br>
+           </section>
+           <section>
+               <br>
+               COMSOL SIMULATION
+               <br>
+               The dilution of an aqueous food dye solution with DI water was simulated by modeling fluid flow channels
+               using SolidWorks CAD and COMSOL 6.0, followed by data processing in MATLAB. 
+               <br>
+               A COMSOL-generated velocity profile of the mixer is shown (RIGHT).
+               <br>
+               <br>
+               Flow through mixing channels was assumed Laminar (Re &lt;2000), and single phase, as solution and diluent are miscible. Hydraulic    
+                diameter, Dh (calculated using perimeter and cross-sectional area of the channel), and diffusivity, D, were used to
+                calculate Peclet numbers for both the straight channel and channels with mixing chambers.
+                <br>
+                <br>
+                Fluid Properties:
+                <br>
+                <img src="MixerFluidProp.png">
+                <br>
+                <br>
+                <table>
+                    <tr class="BOM"><img src="StraightPe.png"></tr>
+                    <tr class="BOM"><img src="MixerPe.png"></tr>
+                </table>
+                <figcaption>Sigma vs Channel Length for Control (Top) and Mixer (Bottom)</figcaption>
+            <br>
+            Sigma was calculated from the COMSOL concentration profiles. As expected, there is a larger decrease of sigma
+            with respect to channel length for the channel with baffles than for the straight channel, indicating decreased mixing
+            length. This improved mixing over the straight channel is observed at all Pe (adjusted by inlet velocities) tested.
+            Peclet was also calculated and plotted for this single microchannel against its length. 
+            <br>
+            <br>
+            <br>
+            <img src="LengthPe.png">
+            <br>
+            <br>
+            As Pe increases, mixing length appears to rapidly increase as well, then level off after around Pe=100, indicating a low Re, high Pe
+            mixing limit.
+            <br>
+            <br>
+           </section>
+            </article>
+        </fieldset>
+        </div>
+        <br>
+        <div>
+            <br>
+            <a href="#top">Top</a>
+            <br>
+            <br>
+        </div>
+
+    </body>
+</html>
