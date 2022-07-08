@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>                              <!--This is where to put things the computer sees-->
+        <title>Hanna Mitamura</title> <!--White text is internet tab label-->
+        <meta charset="utf-8">          <!-- UTF-8 instead of ASCII for internaitonal use-->
+        <link rel="stylesheet" href="../../HannaSiteStyle.css">
+        <meta name="title" content="Hanna Mitamura MechE">
+        <meta name="description" content="Hanna Mitamura, Mechanical Engineer">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <div>
+            <header><h1><a href="https://www.linkedin.com/in/hanna-mitamura-581784113" target="_blank">Hanna Mitamura</a></h1></header>
+             <nav>
+                 <table>
+                     <tr>
+                         <td>
+                         <div class="drop">
+                         <a href="../../index.html">Portfolio</a>
+                             <div class="dropOptions">
+                             <ul>
+                             <li><a href="../../index.html#Projects">Projects</a></li>
+                             <li><a href="../../index.html#CAD">CAD Designs</a></li>
+                             <li><a href="../../index.html#Reverse">Reverse Engineering</a></li>
+                             </ul>
+                              </div>
+                         </div>
+                         </td>
+                         <td><a href="../../Resume/HannaResume.html">Resume</a></td>
+                         <td>
+                             <div class="drop">
+                                 <a href="../../Coursework/coursework.html">Coursework</a>
+                                     <div class="dropOptions">
+                                     <ul>
+                                     <li><a href="../../Coursework/coursework.html#BU">Boston University</a></li>
+                                     <li><a href="../../Coursework/coursework.html#Vassar">Vassar College</a></li>
+                                     <li><a href="../../Coursework/coursework.html#Additional">Additional Coursework</a></li>
+                                     </ul>
+                                      </div>
+                                 </div>
+                         </td>
+                         <td>
+                             <div class="drop">
+                                 <a href="../../Reports.html">Reports</a>
+                                     <div class="dropOptions">
+                                     <ul>
+                                     <li><a href="../../Reports.html#Eng">Mechanical Engineering</a></li>
+                                     <li><a href="../../Reports.html#Chem">Chemistry</a></li>
+                                     <li><a href="../../Reports.html#Biochem">Biochemistry</a></li>
+                                     <li><a href="../../Reports.html#Anth">Anthropology</a></li>
+                                     </ul>
+                                      </div>
+                                 </div>
+                         </td>
+                         <td><a href="../../About/About.html">About</a></td>
+                     </tr>
+                     <tr>
+                         Coded by me in HTML/CSS. Click my name to be redirected to my Linkedin!
+                     </tr>
+                 </table>
+             </nav>
+            </div>
+        <br>
+        <div>
+        <br>
+        <fieldset>
+            <legend><h2>Hot Glue Gun</h2></legend>
+            <aside>
+                <img src="GluePhoto.JPG">
+                <figcaption>Hot Glue Gun</figcaption>
+            </aside>
+            <article>
+            <section>
+            <br>
+            GOAL:
+            <br>
+            The purpose of this project was to gain a basic understanding of engineering design through the process of reverse engineering a household object,
+             in this case a hot glue gun, as well as become more familiar with engineering report writing. 
+            <br>
+            <br>
+        </section>
+            <section>
+            <br>
+            COMPONENT LAYOUT:
+            <br>
+            <img src="HotGlue.png">
+            <br>
+            Sketch of hot glue gun assembly. Functional “chunks” of hot glue gun are labeled and shown in their approximate relative positions.
+            <br>
+            <br>
+            </section>
+            <section>
+            <br>
+            MOCK BILL OF MATERIALS:
+            <br>
+            <table class="BOM" style="width:70%">
+                <tr class="BOM">
+                    <th>Part</th>
+                    <th>Quantity</th>
+                    <th>Material</th>
+                    <th>Function</th>
+                    <th>Dimensions (mm&PlusMinus;0.2mm)</th>
+                    <th>Specifications</th>
+                </tr>
+                <tr class="BOM">
+                    <td>External casing</td>
+                    <td>1</td>
+                    <td>Plastic, metal</td>
+                    <td>Support internal function of hot glue gun</td>
+                    <td>Max. barrel length: 97.4
+                        <br>
+                        Handle length: 71.3
+                    </td>
+                    <td>Must accept glue stick of 8±0.2mm diameter</td>
+                </tr>
+                <tr class="BOM">
+                    <td>Trigger Mechanism</td>
+                    <td>1</td>
+                    <td>Plastic, metal</td>
+                    <td>Push glue stick into heated tubing</td>
+                    <td>Spring length: 6.0
+                        <br>
+                        Internal diameter: 8.1
+                    </td>
+                    <td>Must accept glue stick of 8±0.2mm diameter</td>
+                </tr>
+                <tr class="BOM">
+                    <td>Heating element</td>
+                    <td>1</td>
+                    <td>Aluminum</td>
+                    <td>Melt glue stick</td>
+                    <td>Barrel length: 52.3
+                        <br>
+                        Barrel diameter: 10.0
+                    </td>
+                    <td>Must reach melt glue stick without melting external casing</td>
+                </tr>
+                <tr class="BOM">
+                    <td>Power cord</td>
+                    <td>1</td>
+                    <td>Metal, plastic, ceramic</td>
+                    <td>Conduct electricity</td>
+                    <td>100cm (tape measure)
+                    </td>
+                    <td>Standard 2 prong plug</td>
+                </tr>
+            </table>
+            An electronic digital caliper was used (Accuracy ±0.2mm). The external casing is held together by 5 identical screws. 
+            The heating element is held together by a two metal clips and a rubber adapter collar. The trigger mechanism is wedged
+             between the two halves of the external casing. The power cord is clipped to the heating element on one end, while the 
+             other runs through the bottom of the external casing to an external power source.
+            <br>
+            <br>
+            </section>
+            <section>
+                <br>
+                FUNCTIONAL ANALYSIS:
+                <br>
+                <img src="HotglueFuncA.png">
+                <br>
+                <br>
+                </section>
+            <section>
+            <br>
+            HAND DRAWINGS:
+            <br>
+            <table style="width:60%">
+                <tr><th>HEATING ELEMENT</th></tr>
+                <tr><td><img src="HeatingEl.png"></td></tr>
+                <tr><td class="horizontal">Drawing of the heating element (hot glue gun, “functional chunk”). The heating element was removed from the external casing, 
+                    and a square of ceramic and wires from the power cord (source) were unclipped from the slot shown in the bottom view of the drawing. 
+                    Units are in mm±0.2mm. </td></tr>
+                <tr><th>TRIGGER MECHANISM</th></tr>
+                <tr><td><img src="Trigger.png"></td></tr>
+                <tr><td>Exploded view sketch of the trigger mechanism. Exact dimensions and spring stiffness depend on the size of the external casing.
+                     Parts 1 and 2 are held together with a metal bar (not shown). The protruding arms of part 5 are threaded through parts 4 and 2, and 
+                     through part 3.</td></tr>
+            </table>
+            <br>
+            </section>
+            <section>
+            <br>
+            DESIGN EVALUATION:
+            <br>
+            The basic functions of a hot glue gun are to pass glue into the heating element, melt the glue, and eject the liquid glue.
+             The first basic function is to melt the glue sticks. When the hot glue gun is plugged into a standard 120 volt home wall outlet, 
+             a circuit is completed. Electricity flows through one wire of the power cord through the ceramic plate, where some amount of electrical
+              energy is released as heat, and back out through the second wire.  The aluminum body transfers some of that heat 
+              to the glue stick, which then melts. The interior of the hot glue gun does not overheat because the ceramic plate is a PTC heater, a 
+              “positive temperature coefficient” material, which means that its resistance to current flow increases as temperature increases. 
+              The use of PTC ceramic allows the hot glue gun to “self-regulate” temperature. The manufacturer of the hot glue gun seems to have 
+              chosen to use PTC ceramic and an aluminum body for the heating element to avoid material and manufacturing costs associated with a heat 
+              sensor/warning light system and separate temperature controls. 
+              <br>
+              <br>
+            The second function, linear movement of a glue stick through the barrel of a hot glue gun, is achieved by a trigger mechanism. 
+            Though possible to push a glue stick through the glue gun barrel manually, it is not the most convenient method as it requires either greater
+             single-handed dexterity or the use of two hands. The inconvenience of Push-fed glue guns outweighs the benefit of requiring fewer parts 
+             (simpler manufacture), which is likely why an Amazon.com search of ‘hot glue guns,’ and ‘craft glue guns,’ will pull up only products with
+              trigger mechanisms. The majority of glue guns with triggers are manual, though “automatic,” motor-driven glue guns do exist. The 
+              mechanical trigger was likely selected for the hot glue gun model used for this reverse engineering project because it strikes a balance 
+              between low manufacturing costs and ease of use for the consumer.
+             <br>
+             <br>
+            </section>
+            <br>
+            </article>
+        </fieldset>
+        </div>
+        <br>
+        <div>
+            <br>
+            <a href="#top">Top</a>
+            <br>
+            <br>
+        </div>
+
+    </body>
+    </html>
