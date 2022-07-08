@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>                              <!--This is where to put things the computer sees-->
+        <title>Hanna Mitamura</title> <!--White text is internet tab label-->
+        <meta charset="utf-8">          <!-- UTF-8 instead of ASCII for internaitonal use-->
+        <link rel="stylesheet" href="../../HannaSiteStyle.css">
+        <meta name="title" content="Hanna Mitamura MechE">
+        <meta name="description" content="Hanna Mitamura, Mechanical Engineer">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <div>
+            <header><h1><a href="https://www.linkedin.com/in/hanna-mitamura-581784113" target="_blank">Hanna Mitamura</a></h1></header>
+             <nav>
+                 <table>
+                     <tr>
+                         <td>
+                         <div class="drop">
+                         <a href="../../index.html">Portfolio</a>
+                             <div class="dropOptions">
+                             <ul>
+                             <li><a href="../../index.html#Projects">Projects</a></li>
+                             <li><a href="../../index.html#CAD">CAD Designs</a></li>
+                             <li><a href="../../index.html#Reverse">Reverse Engineering</a></li>
+
+                             </ul>
+                              </div>
+                         </div>
+                         </td>
+                         <td><a href="../../Resume/HannaResume.html">Resume</a></td>
+                         <td>
+                             <div class="drop">
+                                 <a href="../../Coursework/coursework.html">Coursework</a>
+                                     <div class="dropOptions">
+                                     <ul>
+                                     <li><a href="../../Coursework/coursework.html#BU">Boston University</a></li>
+                                     <li><a href="../../Coursework/coursework.html#Vassar">Vassar College</a></li>
+                                     <li><a href="../../Coursework/coursework.html#Additional">Additional Coursework</a></li>
+                                     </ul>
+                                      </div>
+                                 </div>
+                         </td>
+                         <td>
+                             <div class="drop">
+                                 <a href="../../Reports.html">Reports</a>
+                                     <div class="dropOptions">
+                                     <ul>
+                                     <li><a href="../../Reports.html#Eng">Mechanical Engineering</a></li>
+                                     <li><a href="../../Reports.html#Chem">Chemistry</a></li>
+                                     <li><a href="../../Reports.html#Biochem">Biochemistry</a></li>
+                                     <li><a href="../../Reports.html#Anth">Anthropology</a></li>
+                                     </ul>
+                                      </div>
+                                 </div>
+                         </td>
+                         <td><a href="../../About/About.html">About</a></td>
+                     </tr>
+                     <tr>
+                         Coded by me in HTML/CSS. Click my name to be redirected to my Linkedin!
+                     </tr>
+                 </table>
+             </nav>
+            </div>
+        <br>
+        <div>
+        <fieldset>
+            <legend><h2>IREC 2020 Flight Dynamics</h2>
+            </legend>
+             I managed the master copy of the OpenRocket flight simulation file and ensured integration of IREC subteam designs.
+
+            <aside>
+                <ul style="margin-right:35px;">
+                <li><u> Mechanical Subteams</u></li>
+                <li><a href="FlightDynamics.html"><b>Flight Dynamics</b></a></li>
+                <li> Nosecone</li>
+                <li><b><a href="Airframe.html">Airframe</a></b></li>
+                <li> Bulkheads + Motormount</li>
+                <li> Avionics Bay + Payload</li>
+                <li> Fins</li>
+                <li> Separation + Recovery</li>
+                </ul>
+            </aside>
+
+            <article>
+            <section>
+                <br>
+                SUMMARY
+                <br>
+                I applied engineering principles to the design of a rocket with the aim of reaching an altitude of 10,000ft per IREC guidelines.
+                <br>
+                <br>
+                My role was to lead the <a href="Airframe.html">Airframe team</a>, and support <a href="FlightDynamics.html">Flight Dynamics</a>.
+                <br>
+            <br>
+            </section>
+            <section>
+            <br>
+            MODEL ROCKET
+                <br>
+                <img src="IREC.png">
+                <br>
+                <br>
+                </section>
+                <section>
+                GOALS
+                <br>
+                <img src="ObjectiveFlight.png">
+                <br>
+                Objectives were distilled from the IREC manual:
+            <a href="http://www.soundingrocket.org/uploads/9/0/6/4/9064598/sa_cup_irec_rules___requirements_document_20180513__rev_a_.pdf">
+               IREC 2020 Rules and Requirements Document</a>
+                <br>
+                <br>
+                </section>
+            <section>
+            BACKGROUND
+            <br>
+            <img src="Flightpath.png">
+            <br>
+            This is a generic flight path for a model rocket. During the launch phase, the solid propellant is ignited, pressure builds in the motor casing, 
+            and the rocket is launched upwards from the vertical position at the same as hot gas produced by the propellent burning is ejected. The next phase,
+             powered ascent, is characterized by the continued burning of fuel, and by introduction of aerodynamic forces lift and drag. Once the motor is shut 
+             off, the rocket enters the next phase, coasting flight, during which time it can be treated like a projectile. The first half of the flight path,
+              when the rocket is reaching its maximum height of hopefully 10,000ft, is where we are concerned about flight stability.
+            <br>
+            <br>
+            Gravity, the dominating force after motor shut-off, causes the rocket to trace an arc as it reaches its maximum altitude then returns to ground level,
+             hopefully with its descent slowed by some recovery system. 
+             <br>
+             <br>
+            </section>
+            <section>
+            FLIGHT SIMULATION
+            <br>
+            Simulations were all conducted using OpenRocket Simulator. 
+            <br>
+            <br> 
+            A model of the rocket was built by inputting dimensions, relative positions, and masses given by the entire IREC 2020 team.
+            <br>
+            <img src="FlightBuild.png">
+            <br>
+            After motor selection, a flight simulation was run using this model, and taking into account conditions at the New Mexico launch site.
+            <br>
+            <img src="FlightStats.png">
+            <br>
+            <img src="FlightMotor.png">
+            <br>
+            The target apogee is met according to the OpenRocket simulation, assuming perfect launch conditions, and that all values provided by other subteams 
+            is accurate. A payload of 20lbs was used instead of the IREC requirement of 8.8lbs to account for any additional components that may be introduced
+            by changes in sub-team designs.
+            <br>
+            <br>
+            </section>
+            </article>
+        </fieldset>
+        </div>
+        <br>
+        <div>
+            <br>
+            <a href="#top">Top</a>
+            <br>
+            <br>
+        </div>
+
+    </body>
+</html>

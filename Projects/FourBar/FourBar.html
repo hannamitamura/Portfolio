@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>                              <!--This is where to put things the computer sees-->
+        <title>Hanna Mitamura</title> <!--White text is internet tab label-->
+        <meta charset="utf-8">          <!-- UTF-8 instead of ASCII for internaitonal use-->
+        <link rel="stylesheet" href="../../HannaSiteStyle.css">
+        <meta name="title" content="Hanna Mitamura MechE">
+        <meta name="description" content="Hanna Mitamura, Mechanical Engineer">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <div>
+            <header><h1><a href="https://www.linkedin.com/in/hanna-mitamura-581784113" target="_blank">Hanna Mitamura</a></h1></header>
+             <nav>
+                 <table>
+                     <tr>
+                         <td>
+                         <div class="drop">
+                         <a href="../../index.html">Portfolio</a>
+                             <div class="dropOptions">
+                             <ul>
+                             <li><a href="../../index.html#Projects">Projects</a></li>
+                             <li><a href="../../index.html#CAD">CAD Designs</a></li>
+                             <li><a href="../../index.html#Reverse">Reverse Engineering</a></li>
+
+                             </ul>
+                              </div>
+                         </div>
+                         </td>
+                         <td><a href="../../Resume/HannaResume.html">Resume</a></td>
+                         <td>
+                             <div class="drop">
+                                 <a href="../../Coursework/coursework.html">Coursework</a>
+                                     <div class="dropOptions">
+                                     <ul>
+                                     <li><a href="../../Coursework/coursework.html#BU">Boston University</a></li>
+                                     <li><a href="../../Coursework/coursework.html#Vassar">Vassar College</a></li>
+                                     <li><a href="../../Coursework/coursework.html#Additional">Additional Coursework</a></li>
+                                     </ul>
+                                      </div>
+                                 </div>
+                         </td>
+                         <td>
+                             <div class="drop">
+                                 <a href="../../Reports.html">Reports</a>
+                                     <div class="dropOptions">
+                                     <ul>
+                                     <li><a href="../../Reports.html#Eng">Mechanical Engineering</a></li>
+                                     <li><a href="../../Reports.html#Chem">Chemistry</a></li>
+                                     <li><a href="../../Reports.html#Biochem">Biochemistry</a></li>
+                                     <li><a href="../../Reports.html#Anth">Anthropology</a></li>
+                                     </ul>
+                                      </div>
+                                 </div>
+                         </td>
+                         <td><a href="../../About/About.html">About</a></td>
+                     </tr>
+                     <tr>
+                         Coded by me in HTML/CSS. Click my name to be redirected to my Linkedin!
+                     </tr>
+                 </table>
+             </nav>
+            </div>
+        <br>
+        <div>
+        <fieldset>
+            <legend><h2>4-Bar Linkage</h2></legend>
+            
+            <aside>
+                <img src="Assembly.png">
+                <figcaption>Linkage Assembly</figcaption>
+            </aside>
+
+            <article>
+            <section>
+            GOAL
+            <br>
+            I designed a 4-bar linkage that can be contained within the bounds of a 8 ½ x 11” piece of paper and modeled/simulated motion using SolidWorks.
+            <br>
+            <br>
+            </section>
+            <section>
+            <br>
+            LINKAGE ASSEMBLY (RIGHT)
+            <br>
+            The bottom linkage (Base) is fixed along the horizontal, left linkage (crank) is set perpendicular to the base, top (coupler) and right (rocker)
+             linkages are set where their fastening to base and left allow based on linkage length. For the purposes of this motion analysis report, 
+             ‘linkage length’ will be synonymous with ‘linkage effective length,’ the distance between the centers of the two fastener holes on a linkage.
+              Linkage lengths are included below.
+            <br>
+             <br>
+             <img src="Lengths.png">
+             <br>
+            </section>
+            <section>
+            ENGINEERING DRAWINGS
+            <br>
+            Assembly:
+            <br>
+            <img src="DrawAssembly.png">
+            <br>
+            Exploded View:
+            <br>
+            <img src="Explode.png">
+            <br>
+            <br class="horizontal">
+            Top:
+            <br>
+            <img src="DrawTop.png">
+            <br>
+            <img src="Top.png">
+            <br>
+            <br class="horizontal">
+            Left:
+            <br>
+            <img src="DrawLeft.png">
+            <br>
+            <img src="Left.png">
+            <br>
+            <br class="horizontal">
+            Right:
+            <br>
+            <img src="DrawRight.png">
+            <br>
+            <img src="Right.png">
+            <br>
+            <br class="horizontal">
+            Base:
+            <br>
+            <img src="DrawBase.png">
+            <br>
+            <img src="Base.png">
+            <br>
+            <br>
+            </section>
+            <section>
+            CONFIGURATION TYPE
+            <br>
+            Calculations for the Grashoff condition and behavior equations using the linkage lengths indicate that the four bar linkage is a concave,
+             crank-rocker type linkage. 
+            <br>
+            <br>
+            </section>
+            <section>
+            TRACE
+            <br>
+            A trace point was placed on the joint connecting the coupler and rocker linkages. X and Y displacements for the path the trace point traces as the
+             four bar linkage assembly moves were plotted.
+            <br>
+            <img src="Trace.png">
+            <br>
+            4 Bar Trace Point Position Y vs X. This shows the path of the trace point through the entire rotation motion of the crank. 
+            Y positions range between y= +0.76 and y=+3.80 inches, and X positions range between x= -5.28 and x = 0.86 inches
+            <br>
+            <br>
+            The trace point traces an arc during the assembly’s motion rather than a full circle, which is consistent with the previous 
+            identification of the output linkage as a rocker. The trace point had a maximum X displacement of 6.14 inches, and a maximum 
+            Y displacement of 3.03 inches.
+            <br>
+            <br>
+            </section>
+            <section>
+            DESIGN EVALUATION
+            <br>
+            <img src="Bound.png">
+            <br>
+            Given the limited range of motion for a crank-rocker type four bar linkage, and the design constraint that the linkage and all
+             movement remain within an 8 ½ x 11” boundary, the maximum displacement of the four bar linkage design may be increased by assigning
+              the trace point to an additional extension of the coupler linkage. For this specific linkage placing the crank and rocker arms in a 
+              downward position, an increase in radius of the bend in the coupler linkage’s hook, as well as an increase in the hook’s length would
+               result in a straight line motion mechanism. The limited angle of motion for the two supporting arms of a straight line motion 
+               machine has the potential to minimize area occupied by support linkages while maximizing distance traveled by a trace point at the
+                tip of a coupler’s extra arm(s).
+            <br>
+            <br>
+            </section>
+            </article>
+        </fieldset>
+        </div>
+        <br>
+        <div>
+            <br>
+            <a href="#top">Top</a>
+            <br>
+            <br>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>                              <!--This is where to put things the computer sees-->
+        <title>Hanna Mitamura</title> <!--White text is internet tab label-->
+        <meta charset="utf-8">          <!-- UTF-8 instead of ASCII for internaitonal use-->
+        <link rel="stylesheet" href="../../HannaSiteStyle.css">
+        <meta name="title" content="Hanna Mitamura MechE">
+        <meta name="description" content="Hanna Mitamura, Mechanical Engineer">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <div>
+            <header><h1><a href="https://www.linkedin.com/in/hanna-mitamura-581784113" target="_blank">Hanna Mitamura</a></h1></header>
+             <nav>
+                 <table>
+                     <tr>
+                         <td>
+                         <div class="drop">
+                         <a href="../../index.html">Portfolio</a>
+                             <div class="dropOptions">
+                             <ul>
+                             <li><a href="../../index.html#Projects">Projects</a></li>
+                             <li><a href="../../index.html#CAD">CAD Designs</a></li>
+                             <li><a href="../../index.html#Reverse">Reverse Engineering</a></li>
+                             </ul>
+                              </div>
+                         </div>
+                         </td>
+                         <td><a href="../../Resume/HannaResume.html">Resume</a></td>
+                         <td>
+                             <div class="drop">
+                                 <a href="../../Coursework/coursework.html">Coursework</a>
+                                     <div class="dropOptions">
+                                     <ul>
+                                     <li><a href="../../Coursework/coursework.html#BU">Boston University</a></li>
+                                     <li><a href="../../Coursework/coursework.html#Vassar">Vassar College</a></li>
+                                     <li><a href="../../Coursework/coursework.html#Additional">Additional Coursework</a></li>
+                                     </ul>
+                                      </div>
+                                 </div>
+                         </td>
+                         <td>
+                             <div class="drop">
+                                 <a href="../../Reports.html">Reports</a>
+                                     <div class="dropOptions">
+                                     <ul>
+                                     <li><a href="../../Reports.html#Eng">Mechanical Engineering</a></li>
+                                     <li><a href="../../Reports.html#Chem">Chemistry</a></li>
+                                     <li><a href="../../Reports.html#Biochem">Biochemistry</a></li>
+                                     <li><a href="../../Reports.html#Anth">Anthropology</a></li>
+                                     </ul>
+                                      </div>
+                                 </div>
+                         </td>
+                         <td><a href="../../About/About.html">About</a></td>
+                     </tr>
+                     <tr>
+                         Coded by me in HTML/CSS. Click my name to be redirected to my Linkedin!
+                     </tr>
+                 </table>
+             </nav>
+            </div>
+        <br>
+        <div>
+        <fieldset>
+            <legend><h2>Pulse Oximeter</h2></legend>
+            <aside style="float:right;">
+                <img src="PulseOxSolidWorks.png">
+                <figcaption>SolidWorks Model of Casing</figcaption>
+            </aside>
+            <article>
+            <section>
+            <br>
+            GOAL
+            <br>
+            I designed and prototyped an Arduino-based Pulse Oximeter.
+            <br>
+            The steps of an engineering design cycle followed for this project are as follows:
+            <br>
+            <ol>
+                <li>problem identification</li>
+                <li>identification of design space with matched functions and means</li>
+                <li>formulation of a solution to meet the constraints/objectives of the project</li>
+                <li>modeling of parts and prototyping</li>
+                <li>evaluation of the design</li>
+            </ol>
+            <br>
+        </section>
+            <section>
+            <br>
+            BACKGROUND
+            <br>
+            Design of a pulse oximeter was of particular interest given the (Covid-19) pandemic and resulting health and
+             economic crises the US currently faces. Pulse oximeters as a class offer a quick means of assessing the user’s 
+             health without requiring attention from a medical provider. The market for such prescreening devices is expanding due to
+            consumer’s pandemic related purchases. The focus of the design project was finding a viable alternative to 
+            already commercially available pulse oximeters.
+            <br>
+            <br>
+            </section>
+            <section>
+            <br>
+            DESIGN PROCESS
+            <br>
+            The first step in the design process is determining what problem the engineering design will attempt to address. 
+            A problem statement then attempts to refine these goals into a single sentence that can be used as reference for the
+             remainder of the design process. 
+            <br>
+            For this pulse oximeter project the problem statement was as follows:
+            <blockquote>Design a quick, non-invasive, accurate way to measure incoming patient peripheral blood
+                oxygen saturation levels that will not contribute to infectious disease spread.</blockquote>
+            <br>
+            </section>
+            <section>
+            <br>
+            FUNCTIONAL ANALYSIS
+            <br>
+            <img src="PulseOxA.png">
+            <br>
+            <br>
+            </section>
+            <section>
+            <br>
+            DESIGN SPACE
+            <br>
+            Possible design directions corresponding to specific functions are shown in the table below:
+            <br>
+            <img src="PulseOxDesignSp.png">
+            <br>
+            <br>
+            </section>
+            <section>
+            <br>
+            PRELIMINARY SKETCH
+            <br>
+            Below is an early sketch of a pulse oximeter design that follows from the selected design:
+            <br>
+            <img src="PulseOxSketch.png">
+            <br>
+            <br>
+            </section>
+            <section>
+            <br>
+            MATLAB SIGNAL PROCESSING
+            <br>
+            The next step was physical modeling. This involved first learning how to find voltage output corresponding to different ambient light conditions.
+            <br>
+            <br>
+            <img src="PulseOxPrelim.png">
+            <br>
+            Once the selected sensor was confirmed to match voltage to light conditions, the functioning under IR and Red LEDs was checked.
+            <br> Signal output was then processed using a digital bandpass filter from the MATLAB Signal Processing Toolbox. 
+            <br>The selected range was between 0.5 and 10 Hz, which is the allowable range for a human pulse.
+            <br>
+            <img src="PulseOxSignal.png">
+            <br>
+            <br>
+            </section>
+            
+            <section>
+            <br>
+            PHYSICAL MODEL
+            <br>
+            Because this project is aimed at designing a physical object, some consideration of product packaging was necessary.
+            Below is a prototype showing internal layout of the pulse oximeter, with casing made of heavy cardstock.
+            <br>
+            <br>
+            <img src="PulseOxPrototype.png">
+            <br>
+            The final design casing should be made of plastic or metal. A model of the casing was also built in SolidWorks (RIGHT).
+            <br class="horizontal">
+            To both protect fingers and to limit disease spread, patient contact with the pulse oximeter is reduced by use of a disposable paper sleeve, shown below.
+            <br>
+            <table>
+                <td><img src="PulseOxSleeve.png"></td>
+                <td><img src="PulseOxSl2.png"></td>
+            </table>
+            <br>
+            </section>
+            </article>
+        </fieldset>
+        </div>
+        <br>
+        <div>
+            <br>
+            <a href="#top">Top</a>
+            <br>
+            <br>
+        </div>
+
+    </body>
+</html>

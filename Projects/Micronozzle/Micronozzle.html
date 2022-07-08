@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>                              <!--This is where to put things the computer sees-->
+        <title>Hanna Mitamura</title> <!--White text is internet tab label-->
+        <meta charset="utf-8">          <!-- UTF-8 instead of ASCII for internaitonal use-->
+        <link rel="stylesheet" href="../../HannaSiteStyle.css">
+        <meta name="title" content="Hanna Mitamura MechE">
+        <meta name="description" content="Hanna Mitamura, Mechanical Engineer">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <div>
+            <header><h1><a href="https://www.linkedin.com/in/hanna-mitamura-581784113" target="_blank">Hanna Mitamura</a></h1></header>
+             <nav>
+                 <table>
+                     <tr>
+                         <td>
+                         <div class="drop">
+                         <a href="../../index.html">Portfolio</a>
+                             <div class="dropOptions">
+                             <ul>
+                             <li><a href="../../index.html#Projects">Projects</a></li>
+                             <li><a href="../../index.html#CAD">CAD Designs</a></li>
+                             <li><a href="../../index.html#Reverse">Reverse Engineering</a></li>
+
+                             </ul>
+                              </div>
+                         </div>
+                         </td>
+                         <td><a href="../../Resume/HannaResume.html">Resume</a></td>
+                         <td>
+                             <div class="drop">
+                                 <a href="../../Coursework/coursework.html">Coursework</a>
+                                     <div class="dropOptions">
+                                     <ul>
+                                     <li><a href="../../Coursework/coursework.html#BU">Boston University</a></li>
+                                     <li><a href="../../Coursework/coursework.html#Vassar">Vassar College</a></li>
+                                     <li><a href="../../Coursework/coursework.html#Additional">Additional Coursework</a></li>
+                                     </ul>
+                                      </div>
+                                 </div>
+                         </td>
+                         <td>
+                             <div class="drop">
+                                 <a href="../../Reports.html">Reports</a>
+                                     <div class="dropOptions">
+                                     <ul>
+                                     <li><a href="../../Reports.html#Eng">Mechanical Engineering</a></li>
+                                     <li><a href="../../Reports.html#Chem">Chemistry</a></li>
+                                     <li><a href="../../Reports.html#Biochem">Biochemistry</a></li>
+                                     <li><a href="../../Reports.html#Anth">Anthropology</a></li>
+                                     </ul>
+                                      </div>
+                                 </div>
+                         </td>
+                         <td><a href="../../About/About.html">About</a></td>
+                     </tr>
+                     <tr>
+                         Coded by me in HTML/CSS. Click my name to be redirected to my Linkedin!
+                     </tr>
+                 </table>
+             </nav>
+            </div>
+        <br>
+        <div>
+        <fieldset>
+            <legend><h2>Micronozzle Flow</h2></legend>
+            
+            <aside>
+                <ul style="margin-right:35px;">
+                    <li><a href="#Background">Background</a></li>
+                    <li><a href="#Assumptions">Simulation Assumptions</a></li>
+                    <li><a href="#Mesh">Mesh</a></li>
+                    <li><a href="#Initial">Initial Conditions</a></li>
+                    <li><a href="#Qual">Qualitative Plots</a></li>
+                    <li><a href="#Converge">Convergence Check</a></li>
+                    <li><a href="#Throat">Throat Narrowing</a></li>
+                    <li><a href="#Comparison">Case Comparisons</a></li>
+                </ul>
+            </aside>
+
+            <article>
+            <section>
+            <br>
+            GOAL
+            <br>
+            The purpose of this project is to introduce a future student to a topic, and create a tutorial-style report for  OpenFoam simulation related 
+            to the topic. This report examines inlet conditions for flow through micro-nozzles (part of micro-propulsion systems used in miniature spacecraft). 
+             <br>
+             <br>
+            </section>
+            <section id="Background">
+            <br>
+            BACKGROUND
+            <br>
+            Optimization of a micro-propulsion system is extremely important because the propellant storage tank must also be miniaturized to fit in/on the
+             nano-satellite. Shrinking the storage tank increases its surface: volume ratio, making propellant efficiency a design priority [Lekholm 2015]. 
+             The parameters used to characterize a propulsion system are change in velocity (Δv), exit velocity (v_e), Thrust, and specific impulse (Isp) 
+             [Bejhed, 2006; Kohler, 2002; Lekholm, 2015]. Isp can be considered a measurement of efficiency because greater Isp means higher thrust, F_ideal,
+              for a given mass flow rate. 
+
+            <br>
+            <img src="SketchOverview.png">
+            <br>
+            <img src="SketchNozzle.png">
+            <br>
+            </section>
+            <section id="Assumptions">
+            <br>
+            SIMULATION ASSUMPTIONS
+            <br>
+            Due to the microscale, a low Re number is assumed.
+            <br>
+            <img src="Reynolds.png">
+            <br>
+            <ul>
+                <li>U = fluid velocity</li>
+                <li>L = characteristic length</li>
+                <li>&nu;= kinematic viscosity</li>
+            </ul>
+            <br>
+            The fluid is assumed Laminar, Viscous, and Compressible.
+            <br>
+            The micronozzle is a simple CD nozzle, with a rectangular cross section.
+            <br>
+            <br>
+            </section>
+            <section>
+            OPENFOAM SOLVER
+            <br>
+            rhoCentralFoam
+                <ul>
+                    <li>Most often used for micronozzle simulation (per literature review)</li>
+                    <li>Transient Compressible Flow</li>
+                    <li>Requires Pressure, U velocity, Temperature initial values</li>
+                    <li>Density based solver</li>
+                </ul>
+            <br>
+            The file structure of rhoCentralFoam is shown below:
+            <br>
+            <img src="CentralFoam.png">
+            <br>
+            <br>
+            </section>
+            <section id="Mesh">
+            MESH
+            <br>
+            Hand Sketch of Mesh
+            <br>
+            <img src="MeshSketch.png">
+            <br>
+            <br>
+            <br class="horizontal">
+            OpenFOAM Generated Mesh
+            <br>
+            <img src="MeshGeometry.png">
+            <figcaption>Geometry</figcaption>
+            <br>
+            <br>
+            <img src="MeshBoundary.png">
+            <figcaption>Boundary Conditions</figcaption>
+            <br>
+            *Set inviscid condition initially for simplicity.
+            <br>
+            <br>
+            </section>
+            <section id="Initial">
+            INITIAL CONDITIONS
+            <br>
+            <img src="Initial.png">
+            <br>
+            <br>
+            </section>
+            <section id="Qual">
+            QUALITATIVE PRESSURE AND VELOCITY PLOTS
+            <br>
+            <img src="Pressure.png">
+            <br>
+            Pressure gradient is expected to drive flow to the right.
+            <br>
+            <img src="Velocity.png">
+            <br>
+            There is nonzero velocity to the right.
+            <br>
+            <br>
+            </section>
+            <section id="Converge">
+            NUMERICAL AND GRID CONVERGENCE
+            <br>
+            Convergence was checked by plotting velocity values along the throat axis (red line in diagram below) for the P3 case.
+            <br>
+            <img src="ThroatAxis.png">
+            <br>
+            <br>
+            Plots of the Velocity vs position along the nozzle-axis direction were checked for grid sizes of 40x40, and 80x80, both with simple 
+            grading (1 1 1), for each mesh block. The plots for P3 at time 9e-6s are shown:
+            <br>
+            <img src="GridConverge.png">
+            <br>
+            <br>
+            Numerical convergence was checked using the same plots for times 2.4, 2.5, and 2.6 e-4s, near the minimum time needed for convergence:
+            <br>
+            <img src="NumericalConverge.png">
+            <br>
+            <br>
+            </section>
+            <section id="Throat">
+            THROAT NARROWING
+            <br>
+            Further investigation of the Velocity profile of P3 was conducted, through plotting Mach number vs position along the nozzle axis:
+            <br>
+            <img src="Mach.png">
+            <br>
+            The Mach number at the geometric throat was 0.65, indicating subsonic flow. The outlet had Mach 5.5. Choked flow, Mach = 1,
+             occurred around 525 microns, downstream of the geometric throat, which is consistent with narrowing due to viscous boundary layers 
+             despite this case having slip-condition walls. This hints at some issue with OpenFoam assigning wall boundary conditions to 
+             the micronozzle cases examined. Downstream narrowing is not expected for inviscid flow cases.
+            <br>
+            <br>
+            </section>
+            <section id="Comparison">
+            COMPARISON OF CASES: Assigned Initial Pressure (P3, P5, P7) vs Assigned Initial Velocity (U1, U2, U3)
+            <br>
+            <br>
+            Cases P3, P5 and P7 were compared to their corresponding velocity controlled cases, U1, U2 and U3. 
+            Plots of Mach number vs Position for each of the pairings are shown:
+            <br>
+            <br>
+            <table>
+                <td>
+                    <img src="MachP3.png">
+                    <figcaption>P3 and U1. Initial inlet velocity of 106 m/s.</figcaption>
+                </td>
+                <td>
+                    <img src="MachP5.png">
+                    <figcaption>P5 and U2. Initial inlet velocity of 103 m/s.</figcaption>
+                </td>
+                <td>
+                    <img src="MachP7.png">
+                    <figcaption>P7 and U3. Initial inlet velocity of 56 m/s.</figcaption>
+                </td>
+            </table>
+            Mach number profiles for the different initial pressure ratio cases seem to match fairly well to their corresponding initial velocity cases. 
+            The nozzle is accelerating flow in the same way for all of these cases. However inspection of the unscaled velocity profiles shows some 
+            divergence between the solutions. 
+            <br>
+            <br>
+            <table>
+                <td>
+                    <img src="VelP3.png">
+                    <figcaption>P3 and U1</figcaption>
+                </td>
+                <td>
+                    <img src="VelP5.png">
+                    <figcaption>P5 and U2</figcaption>
+                </td>
+                <td>
+                    <img src="VelP7.png">
+                    <figcaption>P7 and U3</figcaption>
+                </td>
+            </table>
+            Larger initial inlet velocity seems to correspond to a larger difference between the U* case’s exit velocity and its corresponding
+             P* case exit velocity. As discussed earlier, OpenFoam appears to be ignoring the zero viscosity and slip wall condition. Assuming that 
+             there is some partial-slip or even non-slip condition condition being set, there should be nonuniform (half-parabolic for non-slip case)
+              velocity profiles over lines perpendicular to the nozzle axis. This would mean that Umax from the P* cases is being set as a uniform inlet
+               velocity for the U* cases. Plots 15a-c make sense if they are comparing a nonuniform P* inlet case (therefore lower U average) to a uniform
+                Umax U* case. 
+            <br>
+            <br>
+            This reasoning is consistent with the velocity profiles found for the inlets of P3 and U1:
+            <br>
+            <img src="InletVel.png">
+            <br>
+            The U1 profile shows the expected flat slip profile, but the P3 case appears to show a profile more similar to a non-slip case, 
+            with velocity near the wall approaching 0 m/s. 
+            <br>
+            <br>
+            </section>
+            </article>
+        </fieldset>
+        </div>
+        <br>
+        <div>
+            <br>
+            <a href="#top">Top</a>
+            <br>
+            <br>
+        </div>
+
+    </body>
+</html>
