@@ -56,6 +56,10 @@ aside img{
     width: 100%;
 }
 
+img{
+    border-radius:10px;
+}
+
 div{
     font-size:large;
     background-image:radial-gradient(white,lightgrey);
