@@ -62,7 +62,7 @@ img{
 
 div{
     font-size:large;
-    background-image:radial-gradient(white,lightgrey);
+    background-image:radial-gradient(white,rgb(230,216,215));
     width:70%;
     margin-left:auto;
     margin-right:auto;
