@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>                              <!--This is where to put things the computer sees-->
+        <title>Hanna Mitamura</title> <!--White text is internet tab label-->
+        <meta charset="utf-8">          <!-- UTF-8 instead of ASCII for internaitonal use-->
+        <link rel="stylesheet" href="../../HannaSiteStyle.css">
+        <meta name="title" content="Hanna Mitamura MechE">
+        <meta name="description" content="Hanna Mitamura, Mechanical Engineer">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+
+            <header><h1><a href="https://www.linkedin.com/in/hanna-mitamura-581784113" target="_blank">Hanna Mitamura</a></h1></header>
+             <nav>
+                 Coded by me in HTML/CSS. Click my name to be redirected to my Linkedin!
+                 <br>
+                 <br>
+                         <div class="drop">
+                         <a href="../../index.html">Portfolio</a>
+                             <div class="dropOptions">
+                             <ul>
+                             <li><a href="../../index.html#Projects">Projects</a></li>
+                             <li><a href="../../index.html#CAD">CAD Designs</a></li>
+                             <li><a href="../../index.html#Reverse">Reverse Engineering</a></li>
+
+                             </ul>
+                              </div>
+                         </div>
+                         <div class="drop"><a href="../../Resume/HannaResume.html">Resume</a></div>
+                             <div class="drop">
+                                 <a href="../../Coursework/coursework.html">Coursework</a>
+                                     <div class="dropOptions">
+                                     <ul>
+                                     <li><a href="../../Coursework/coursework.html#BU">Boston University</a></li>
+                                     <li><a href="../../Coursework/coursework.html#Vassar">Vassar College</a></li>
+                                     <li><a href="../../Coursework/coursework.html#Additional">Additional Coursework</a></li>
+                                     </ul>
+                                      </div>
+                                 </div>
+                             <div class="drop">
+                                 <a href="../../Reports.html">Reports</a>
+                                     <div class="dropOptions">
+                                     <ul>
+                                     <li><a href="../../Reports.html#Eng">Mechanical Engineering</a></li>
+                                     <li><a href="../../Reports.html#Chem">Chemistry</a></li>
+                                     <li><a href="../../Reports.html#Biochem">Biochemistry</a></li>
+                                     <li><a href="../../Reports.html#Anth">Anthropology</a></li>
+                                     </ul>
+                                      </div>
+                                 </div>
+                 <div class="drop"><a href="../../About/About.html">About</a></div>
+             </nav>
+
+        <br>
+        <div>
+        <fieldset>
+            <legend><h2>Collatz Sequence</h2></legend>
+           
+            <article>
+            <section>
+            <br>
+            Prompt:
+            <br>
+            <img src="Euler.png">
+            <br>
+            <br>
+        </section>
+            <section>
+            <br>
+            Code:
+            <br>
+            <pre>
+            function threeEx()
+%matlab code for Collatz Conjecture 3n+1 Problem
+%This script assumes the Collatz Conjecture holds,
+%that sequences end in the 421 loop
+
+start=input('Enter vector of starting values (+ real integers) []: ');
+    if start<=0
+        start(start<=0)=input('Replace start<=0 with + real integers []:');
+         %correct terms if input wrong  
+         newvec=sprintf('%d ',start);
+         fprintf('Starting values: %s ',newvec)
+    end
+
+peak=[];
+%initialize vector of max. values
+labcol='rgbcmykw';
+%start condition
+    for i=1:length(start)
+        %assign starting position
+        val=[start(i)];
+        while val(end)~=1
+         %Assuming all + real integers result in end sequence 421
+            if rem(val(end),2)==0
+             val=[val val(end)/2];
+            else
+             val=[val 3*val(end)+1];
+            end
+        end
+        %build values for results of operation on starting value
+    hold on
+        if i<=length(labcol)
+         lincol=strcat('-',labcol(i));
+        elseif rem(i,length(labcol))==0
+         lincol=strcat('-',labcol(end));
+        else
+         lincol=strcat('-',labcol(rem(i,length(labcol))));
+        end
+    %Assign plot colors
+    plot(1:length(val),val,lincol)
+    %plot values
+        for x=1:length(val)
+         text(x+.05,val(x),num2str(val(x)))
+        end
+    %label each point
+    peak=[peak max(val)];
+    %Find max value of sequence
+    end
+peak=sprintf('%d ',peak);
+fprintf('Max value(s): %s\n',peak)
+%output max values of sequences associated with starting values
+end
+</pre>
+            <br>
+            <br>
+            </section>
+            <section>
+            <br>
+            Output:
+            <br>
+           <img src="Command.png">
+            <br>
+            </section>
+            <section>
+            <br>
+            Figure:
+            <br>
+            <img src="Figure.png">
+            <br>
+            <br>
+            </section>
+            </article>
+        </fieldset>
+        </div>
+        <br>
+
+            <br>
+            <a href="#top">Top</a>
+            <br>
+            <br>
+
+
+    </body>
+</html>
