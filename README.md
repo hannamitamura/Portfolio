@@ -1,2 +1,2 @@
-# hannaMitamura.github.io
+# hannaDolin.github.io
 This is a Portfolio to complement application materials for Mechanical Engineering positions.
